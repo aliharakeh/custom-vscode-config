@@ -66,8 +66,8 @@
     // custom vscode ui
     "vscode_custom_css.imports": [
         // Absolute file paths for your css/js files
-        "file:///C:/vscode-ui/custom-vscode.css",
-        "file:///C:/vscode-ui/vscode-script.js"
+        "file:///C:/Workspace/GitHub/custom-vscode-config/custom-vscode.css",
+        "file:///C:/Workspace/GitHub/custom-vscode-config/vscode-script.js"
     ],
 
     // icons
