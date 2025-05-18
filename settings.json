@@ -1,0 +1,130 @@
+{
+    // window
+    "window.restoreWindows": "none",
+
+    // terminal
+    "terminal.integrated.fontSize": 15,
+
+    // secutrity
+    "security.workspace.trust.untrustedFiles": "open",
+
+    // breadcrumbs
+    "breadcrumbs.enabled": false,
+
+    // cursor
+    "cursor.cpp.disabledLanguages": [
+        "plaintext",
+        "markdown",
+        "scminput"
+    ],
+
+    // files
+    "files.insertFinalNewline": false,
+    "files.trimTrailingWhitespace": true,
+
+    // workbench
+    "workbench.tree.enableStickyScroll": false,
+    "workbench.tree.renderIndentGuides": "none",
+    "workbench.tree.indent": 8,
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.openPositioning": "last",
+    "workbench.sideBar.location": "left",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Cursor Dark Midnight",
+
+    // explorer
+    "explorer.compactFolders": false,
+    "explorer.decorations.badges": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+    // editor
+    "editor.minimap.enabled": false,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.mouseWheelZoom": true,
+    "editor.linkedEditing": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.fontLigatures": true,
+    "editor.wordWrapColumn": 120,
+    "editor.indentSize": 4,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always",
+        "source.removeUnusedImports": "always",
+        "source.addMissingImports.ts": "always",
+        "source.sortImports": "always"
+    },
+    "editor.guides.bracketPairs": "active",
+    "editor.stickyScroll.enabled": false,
+    "editor.fontSize": 15,
+    "editor.lineHeight": 2,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.guides.indentation": false,
+    "editor.overviewRulerBorder": true,
+    "editor.hideCursorInOverviewRuler": true,
+
+    // custom vscode ui
+    "vscode_custom_css.imports": [
+        // Absolute file paths for your css/js files
+        "file:///C:/vscode-ui/custom-vscode.css",
+        "file:///C:/vscode-ui/vscode-script.js"
+    ],
+
+    // icons
+    "material-icon-theme.hidesExplorerArrows": true,
+
+    // javascript & typescript
+    "javascript.format.semicolons": "remove",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.format.semicolons": "insert",
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+
+    // format
+    "prettier.arrowParens": "avoid",
+    "prettier.printWidth": 100,
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    "prettier.semi": false,
+    "prettier.htmlWhitespaceSensitivity": "css",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // git
+    "git.autofetch": true,
+    "git.autofetchPeriod": 900,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "gitlens.advanced.fileHistoryShowMergeCommits": true,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.currentLine.pullRequests.enabled": false,
+    "gitlens.telemetry.enabled": false,
+
+    // extensions
+    "extensions.ignoreRecommendations": true,
+    "angular2-switcher.styleFormats": [
+        ".scss",
+        ".sass",
+        ".less",
+        ".css"
+    ],
+    "git.openRepositoryInParentFolders": "always",
+}

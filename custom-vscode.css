@@ -1,0 +1,157 @@
+:root {
+    --custom-font-family: 'Geist Mono', 'JetBrains Mono';
+    --custom-tree-font-size: 14px;
+    --custom-font-size: 15px;
+    --custom-scrollbar-width: 2px;
+    --custom-scrollbar-background: #efefef;
+    --custom-popup-width: 800px;
+}
+
+.monaco-workbench {
+    /* all peek related vars */
+    /* --vscode-peekViewTitle-background: red !important; */
+    /* --vscode-peekViewTitleLabel-foreground: red !important; */
+    /* --vscode-peekViewTitleDescription-foreground: red !important; */
+    /* --vscode-peekView-border: red !important; */
+    /* --vscode-peekViewResult-background: red !important; */
+    /* --vscode-peekViewResult-lineForeground: red !important; */
+    /* --vscode-peekViewResult-fileForeground: red !important; */
+    /* --vscode-peekViewResult-selectionBackground: red !important; */
+    /* --vscode-peekViewResult-selectionForeground: red !important; */
+    /* --vscode-peekViewEditor-background: red !important; */
+    /* --vscode-peekViewEditorGutter-background: red !important; */
+    /* --vscode-peekViewEditorStickyScroll-background: red !important; */
+    --vscode-peekViewResult-matchHighlightBackground: rgba(74, 75, 77, 0.212) !important;
+    --vscode-peekViewEditor-matchHighlightBackground: rgba(74, 75, 77, 0.212) !important;
+}
+
+/* ************************************************************************************************
+ *   Side bar
+ **************************************************************************************************/
+.part.sidebar {
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Sidebar top shadow */
+.monaco-scrollable-element > .shadow.top {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75) !important;
+    top: -3px !important;
+}
+
+/* ************************************************************************************************
+ *   File Explorer
+ **************************************************************************************************/
+
+/* Selected Item */
+.monaco-list.list_id_1 .monaco-list-row.selected {
+    background-color: #4f5971 !important;
+    opacity: 1 !important;
+    border-top: 1px #727b90 solid;
+    border-bottom: 1px #727b90 solid;
+}
+
+/* List item label name */
+.monaco-list.list_id_1 .monaco-list-row.selected .label-name {
+    color: #fff !important;
+    opacity: 1 !important;
+}
+
+.monaco-list.list_id_1 .monaco-list .monaco-list-row,
+.monaco-list.list_id_1 .monaco-icon-label .label-name {
+    font-family: var(--custom-font-family) !important;
+    font-size: var(--custom-tree-font-size) !important;
+    font-weight: 400 !important;
+}
+
+/* ************************************************************************************************
+ *   Scroll Bar - problem with horizontal scroll bar
+ **************************************************************************************************/
+/* .slider {
+    position: absolute !important;
+    right: var(--custom-scrollbar-width) !important;
+    width: var(--custom-scrollbar-width) !important;
+    background: var(--custom-scrollbar-background) !important;
+    left: auto !important;
+} */
+
+/* ************************************************************************************************
+ *   Tooltip box style
+ **************************************************************************************************/
+.monaco-editor-hover,
+.monaco-hover {
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(3px) !important;
+    border-radius: 16px !important;
+    border: none !important;
+    outline: 0px !important;
+    padding: 1rem !important; /* padding affects the height so make sure to adjust the max-height when changing it */
+    max-height: 300px !important;
+}
+
+.monaco-hover .monaco-hover-content .hover-row.status-bar .actions {
+    background-color: transparent !important;
+    width: auto !important;
+    padding-inline: 16px !important;
+    padding-block: 4px !important;
+    border-radius: 1rem !important;
+}
+
+.monaco-resizable-hover {
+    border: none !important;
+}
+
+/* ************************************************************************************************
+ *   Command Palette
+ **************************************************************************************************/
+.quick-input-widget {
+    transform: translateY(-50%) translateX(-15%) !important;
+    top: 50% !important;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.35) !important;
+    padding: 10px 10px 18px 10px !important;
+    backdrop-filter: blur(3px) !important;
+    border-radius: 20px !important;
+    width: var(--custom-popup-width) !important;
+}
+
+/* Command palette list rows */
+.quick-input-widget .monaco-list-rows {
+    background: transparent !important;
+    font-size: 15px !important;
+    height: auto !important;
+    min-height: 400px !important;
+    position: static !important;
+}
+
+.quick-input-widget .monaco-list .monaco-list-row {
+    position: static !important;
+    padding: 4px !important;
+    height: auto !important;
+    top: 0 !important;
+}
+
+.quick-input-widget .monaco-list .monaco-list-row .monaco-icon-label .label-name {
+    font-family: var(--custom-font-family) !important;
+    font-size: var(--custom-font-size) !important;
+    font-weight: 400 !important;
+}
+
+/* Command palette text input */
+.quick-input-filter .monaco-inputbox {
+    border-radius: 12px !important;
+    padding: 10px !important;
+    border: 1px solid white !important;
+    font-family: var(--custom-font-family) !important;
+    font-size: var(--custom-font-size) !important;
+    margin-bottom: 16px !important;
+}
+
+/* Command Script Blur */
+#command-blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(8px);
+}
