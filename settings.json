@@ -17,6 +17,7 @@
         "markdown",
         "scminput"
     ],
+    "cursor.cpp.enablePartialAccepts": true,
 
     // files
     "files.insertFinalNewline": false,
@@ -58,17 +59,10 @@
     "editor.stickyScroll.enabled": false,
     "editor.fontSize": 15,
     "editor.lineHeight": 2,
-    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontFamily": "Geist Mono",
     "editor.guides.indentation": false,
     "editor.overviewRulerBorder": true,
     "editor.hideCursorInOverviewRuler": true,
-
-    // custom vscode ui
-    "vscode_custom_css.imports": [
-        // Absolute file paths for your css/js files
-        "file:///C:/Workspace/GitHub/custom-vscode-config/custom-vscode.css",
-        "file:///C:/Workspace/GitHub/custom-vscode-config/vscode-script.js"
-    ],
 
     // icons
     "material-icon-theme.hidesExplorerArrows": true,
@@ -108,6 +102,7 @@
     },
 
     // git
+    "git.openRepositoryInParentFolders": "always",
     "git.autofetch": true,
     "git.autofetchPeriod": 900,
     "git.confirmSync": false,
@@ -120,11 +115,15 @@
 
     // extensions
     "extensions.ignoreRecommendations": true,
+    "vscode_custom_css.imports": [
+        // Absolute file paths for your css/js files
+        "file:///C:/Workspace/GitHub/custom-vscode-config/custom-vscode.css",
+        "file:///C:/Workspace/GitHub/custom-vscode-config/vscode-script.js"
+    ],
     "angular2-switcher.styleFormats": [
         ".scss",
         ".sass",
         ".less",
         ".css"
     ],
-    "git.openRepositoryInParentFolders": "always",
 }

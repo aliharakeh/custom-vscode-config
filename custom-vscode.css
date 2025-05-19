@@ -43,24 +43,28 @@
  **************************************************************************************************/
 
 /* Selected Item */
-.monaco-list.list_id_1 .monaco-list-row.selected {
-    background-color: #4f5971 !important;
-    opacity: 1 !important;
-    border-top: 1px #727b90 solid;
-    border-bottom: 1px #727b90 solid;
-}
+.monaco-list.list_id_1 {
+    .monaco-list-row {
+        .selected {
+            background-color: #4f5971 !important;
+            opacity: 1 !important;
+            border-top: 1px #727b90 solid;
+            border-bottom: 1px #727b90 solid;
 
-/* List item label name */
-.monaco-list.list_id_1 .monaco-list-row.selected .label-name {
-    color: #fff !important;
-    opacity: 1 !important;
-}
+            .label-name {
+                color: #fff !important;
+                opacity: 1 !important;
+            }
+        }
+    }
 
-.monaco-list.list_id_1 .monaco-list .monaco-list-row,
-.monaco-list.list_id_1 .monaco-icon-label .label-name {
-    font-family: var(--custom-font-family) !important;
-    font-size: var(--custom-tree-font-size) !important;
-    font-weight: 400 !important;
+    /* List item label name */
+    .monaco-list .monaco-list-row,
+    .monaco-icon-label .label-name {
+        font-family: var(--custom-font-family) !important;
+        font-size: var(--custom-tree-font-size) !important;
+        font-weight: 400 !important;
+    }
 }
 
 /* ************************************************************************************************
@@ -86,14 +90,14 @@
     outline: 0px !important;
     padding: 1rem !important; /* padding affects the height so make sure to adjust the max-height when changing it */
     max-height: 300px !important;
-}
 
-.monaco-hover .monaco-hover-content .hover-row.status-bar .actions {
-    background-color: transparent !important;
-    width: auto !important;
-    padding-inline: 16px !important;
-    padding-block: 4px !important;
-    border-radius: 1rem !important;
+    .monaco-hover-content .hover-row.status-bar .actions {
+        background-color: transparent !important;
+        width: auto !important;
+        padding-inline: 16px !important;
+        padding-block: 4px !important;
+        border-radius: 1rem !important;
+    }
 }
 
 .monaco-resizable-hover {
@@ -111,41 +115,92 @@
     backdrop-filter: blur(3px) !important;
     border-radius: 20px !important;
     width: var(--custom-popup-width) !important;
+
+    /* Command palette list rows */
+    .monaco-list-rows {
+        background: transparent !important;
+        font-size: 15px !important;
+        height: auto !important;
+        min-height: 400px !important;
+        position: static !important;
+    }
+
+    .monaco-list .monaco-list-row {
+        position: static !important;
+        padding: 4px !important;
+        height: auto !important;
+        top: 0 !important;
+
+        .monaco-icon-label .label-name {
+            font-family: var(--custom-font-family) !important;
+            font-size: var(--custom-font-size) !important;
+            font-weight: 400 !important;
+        }
+    }
+
+    /* Command palette text input */
+    .quick-input-filter .monaco-inputbox {
+        border-radius: 12px !important;
+        padding: 10px !important;
+        border: 1px solid white !important;
+        font-family: var(--custom-font-family) !important;
+        font-size: var(--custom-font-size) !important;
+        margin-bottom: 16px !important;
+    }
 }
 
-/* Command palette list rows */
-.quick-input-widget .monaco-list-rows {
-    background: transparent !important;
-    font-size: 15px !important;
-    height: auto !important;
-    min-height: 400px !important;
-    position: static !important;
+/* ************************************************************************************************
+ *   Autocomplete & Suggestions
+ **************************************************************************************************/
+.overflowingOverlayWidgets .suggest-details-container {
+    width: auto !important;
+
+    .suggest-details {
+        box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.45) !important;
+        backdrop-filter: blur(3px) !important;
+        border-radius: 16px !important;
+        border: none !important;
+        outline: 0px !important;
+        padding: 1rem !important;
+        /* transform: translateX(-20%) !important; */ /* TODO: move this login to js script to handle the left/right postion of the panel */
+        width: auto !important;
+        max-width: 500px !important;
+    }
 }
 
-.quick-input-widget .monaco-list .monaco-list-row {
-    position: static !important;
-    padding: 4px !important;
-    height: auto !important;
-    top: 0 !important;
+/* Docs Panel */
+.overflowingContentWidgets .editor-widget.suggest-widget {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+
+    .monaco-list.list_id_2 {
+        .monaco-list-rows {
+            background: transparent !important;
+            height: auto !important;
+            min-height: 400px !important;
+            position: static !important;
+        }
+
+        .monaco-list-row {
+            position: static !important;
+            padding-inline: 8px !important;
+            height: auto !important;
+            top: 0 !important;
+
+            .suggest-icon {
+                margin-right: 8px !important;
+            }
+
+            .monaco-icon-label .label-name {
+                font-family: var(--custom-font-family) !important;
+            }
+        }
+    }
 }
 
-.quick-input-widget .monaco-list .monaco-list-row .monaco-icon-label .label-name {
-    font-family: var(--custom-font-family) !important;
-    font-size: var(--custom-font-size) !important;
-    font-weight: 400 !important;
-}
-
-/* Command palette text input */
-.quick-input-filter .monaco-inputbox {
-    border-radius: 12px !important;
-    padding: 10px !important;
-    border: 1px solid white !important;
-    font-family: var(--custom-font-family) !important;
-    font-size: var(--custom-font-size) !important;
-    margin-bottom: 16px !important;
-}
-
-/* Command Script Blur */
+/* ************************************************************************************************
+ *   JS Script Related CSS
+ **************************************************************************************************/
 #command-blur {
     position: absolute;
     width: 100%;
